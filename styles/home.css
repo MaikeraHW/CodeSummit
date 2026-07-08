@@ -62,24 +62,35 @@
     background-color: var(--color900);
     position: relative;
     overflow: hidden;
+    min-height: 20rem;
 }
 
 .heroBanner::before{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .4);
     z-index: 1;
 }
 
-.heroBannerTitle{
+.heroBannerContent{
     position: absolute;
     left: 6%;
-    top: 30%;
-    color: var(--standardWhite);
-    font-size: clamp(1rem, 4dvw, 5rem);
-    max-width: 40%;
+    top: 20%;
     z-index: 2;
+    max-width: 50%;
+}
+
+.heroBannerTitle{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--standardWhite);
+    font-size: clamp(1rem, 3.5dvw, 5rem);   
+}
+
+.heroBannerTitle span{
+    font-size: clamp(1rem, 3.5dvw, 5rem);
+    color: var(--mainPurple);
 }
 
 .heroBannerImg{
@@ -93,6 +104,35 @@
     margin-left: auto;
 }
 
+.heroButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mainButton{
+    min-width: fit-content;
+    font-size: clamp(1rem, 3dvw, 1.6rem);
+    padding: clamp(1rem, 2dvw, 2rem) clamp(2rem, 2dvw, 3rem);
+    color: var(--standardWhite);
+    background-color: var(--mainPurple);
+    border: none;
+    border-radius: 0.4rem;
+    margin: 2rem 1rem;
+}
+
+.secondaryButton{
+    min-width: fit-content;
+    font-size: clamp(1rem, 3dvw, 1.6rem);
+    padding: clamp(1rem, 2dvw, 2rem) clamp(2rem, 2dvw, 3rem);
+    color: var(--standardWhite);
+    background-color: var(--mainPurple);
+    border: none;
+    border-radius: 0.4rem;
+    margin: 2rem 1rem;
+}
+
 
 
 /*<!---------------------- MOBILE ----------------------->*/
@@ -104,7 +144,7 @@
     }
 
     .hamburger span{
-        background-color: white;
+        background-color: var(--standardWhite);
     }
 
     .headNav{
@@ -149,5 +189,41 @@
 
     .hamburger.active span:nth-child(3){
         transform:translateY(-9px) rotate(-45deg);
+    }
+
+    .heroBannerContent{
+        text-align: center;
+        max-width: 100%;
+        top: 25%;
+        left: 0;
+    }
+
+    .heroBannerTitle{
+        max-width: 100%;
+    }
+
+    .heroBannerTitle span{
+        font-size: clamp(1rem, 3.5dvw, 5rem);
+        color: var(--mainPurple);
+    }
+
+    .heroButtons{
+        justify-content: center;
+    }
+
+    .heroBannerImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroBannerImg img{
+        display: block;
+        width: 100%;
+    }
+
+    .heroBanner::before{
+    background: rgba(0, 0, 0, .5);
     }
 }
