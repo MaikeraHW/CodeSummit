@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+    font-size: 62.5%;
+    
+
+    --standardWhite: #fff;
+    --mainPurple: #787ae7;
+    --secondPurple: #8B5CF6;
+    --mainBlue: #22D3EE;
+    --success: #22C55E;
+    --alert: #F59E08;
+    --error: #EF4444;
+    --color600: #374151;
+    --color700: #1F2937;
+    --color800: #111827;
+    --color900: #0B0F19;
+}
+

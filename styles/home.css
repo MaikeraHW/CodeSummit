@@ -1,0 +1,153 @@
+.header{
+    width:100%;
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:1000;
+    background: var(--color900);
+    color: var(--standardWhite);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.headBar{
+    width: 96%;
+    margin:auto;
+    padding:1.8rem 2.4rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    height:45px;
+}
+
+.navList{
+    display:flex;
+    gap:4rem;
+    list-style:none;
+    font-size: 4rem;
+}
+
+.navListItem a{
+    color: var(--standardWhite);
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.hamburger{
+    display:none;
+    width:4rem;
+    height:4rem;
+    border:none;
+    background:none;
+    cursor:pointer;
+    padding:0;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:0.6rem;
+}
+
+.hamburger span{
+    width:2.8rem;
+    height:0.3rem;
+    background: var(--color900);
+    border-radius:1rem;
+    transition:.3s;
+}
+
+.heroBanner{
+    background-color: var(--color900);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroBanner::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+.heroBannerTitle{
+    position: absolute;
+    left: 6%;
+    top: 30%;
+    color: var(--standardWhite);
+    font-size: clamp(1rem, 4dvw, 5rem);
+    max-width: 40%;
+    z-index: 2;
+}
+
+.heroBannerImg{
+    width: 100%;
+    height: 100%;
+}
+
+.heroBannerImg img{
+    display: block;
+    width: 65%;
+    margin-left: auto;
+}
+
+
+
+/*<!---------------------- MOBILE ----------------------->*/
+
+@media(max-width:768px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    .hamburger span{
+        background-color: white;
+    }
+
+    .headNav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background: var(--standardWhite);
+        max-height:0;
+        overflow:hidden;
+        transition:max-height .35s ease;
+        box-shadow:0 8px 20px rgba(0,0,0,.08);
+    }
+
+    .headNav.active{
+        max-height: 100rem;
+    }
+
+    .navList{
+        background-color: var(--color900);
+        flex-direction:column;
+        gap:0;
+        padding:1.6rem 0;
+    }
+
+    .navListItem{
+        width:100%;
+    }
+
+    .navListItem a{
+        display:block;
+        padding:1.6rem 2.4rem;
+    }
+
+    .hamburger.active span:nth-child(1){
+    transform:translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2){
+        opacity:0;
+    }
+
+    .hamburger.active span:nth-child(3){
+        transform:translateY(-9px) rotate(-45deg);
+    }
+}
