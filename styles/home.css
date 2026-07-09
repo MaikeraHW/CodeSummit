@@ -228,12 +228,29 @@
     margin: 2rem auto;
 }
 
-@media(min-width:769px){
+.buttonHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 90%;
+    margin: auto;
+}
 
+.aboutUsButton{
+    text-decoration: none;
+    color: var(--mainPurple);
+    border: 2px solid var(--mainPurple);
+    border-radius: 0.8rem;
+    min-width: fit-content;
+    font-size: clamp(1rem, 2.5dvw, 1.6rem);
+    padding: clamp(1rem, 2dvw, 2rem) clamp(2rem, 2dvw, 3rem);
+    background-color: transparent;
+    transition: 0.2s;
+}
 
-
-
-
+.aboutUsButton:hover{
+    background-color: var(--mainPurple);
+    color: var(--color900);
 }
 
 /*<!---------------------- MOBILE ----------------------->*/
@@ -368,10 +385,6 @@
         width: 100%;
     }
 
-    .aboutUs{
-        max-height: 40rem;
-    }
-
     .aboutUsContent{
         padding: 0;
         position: absolute;
@@ -389,19 +402,25 @@
 
     .aboutUsSubtitle{
         margin: auto;
-        font-size: clamp(2rem, 7dvw, 4rem);
+        font-size: clamp(2rem, 6.5dvw, 4rem);
         position: relative;
         z-index: 2;
         max-width: 90%;
+        white-space: nowrap;
     }
 
     .aboutUsText{
         color: var(--color500);
-        margin: calc(5dvw) auto;
+        margin: calc(4dvw) auto;
         position: relative;
         z-index: 2;
         font-size: clamp(1rem, 3dvw, 2rem);
         width: 90%;
+    }
+
+    .aboutUsButton{
+        position: relative;
+        z-index: 2;
     }
 
 }
