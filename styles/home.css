@@ -265,8 +265,7 @@
     var(--color900) 12%,
     var(--color900) 50%,
     var(--color900) 88%,
-    var(--mainPurple) 100%
-);
+    var(--mainPurple) 100% );
 }
 
 .contactHolder{
@@ -490,6 +489,126 @@
     right:-30px;
 }
 
+.footer {
+    border-top: 1px solid var(--color700);
+    background-color: var(--color900);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0.5rem;
+}
+
+.footerBoxA{
+    width: 25%;
+    padding: 1rem;
+}
+
+.footerLogo{
+    width: 30%;
+    min-width: 10rem;
+    margin: auto;
+}
+
+.footerLogo img{
+    display: block;
+    width: 100%;
+}
+
+.footerText{
+    max-width: 45rem;
+    margin: 1rem auto;
+    color: var(--color500);
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.logosList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    margin: auto;
+}
+
+.logosItem{
+    max-width: 2rem;
+}
+
+.logosItem img{
+    width: 100%;
+}
+
+.FooterBigBox{
+    width: 40%;
+    max-width: 45rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerTitle{
+    color: var(--color500);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 2rem auto;
+}
+
+.footerList{
+    list-style: none;
+    color: var(--color500);
+    font-size: 1.2rem;
+}
+
+.footerItem{
+    margin: 1rem 0;
+}
+
+.footerItem a{
+    text-decoration: none;
+    color: var(--color500);
+    font-size: 1.2rem;
+}
+
+.footerBoxB:nth-child(2){
+    text-align: end;
+}
+
+.footerLastTitle{
+    color: var(--color500);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.footerItem div{
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.footerItem img{
+    width: 2rem;
+}
+
+.footerItem p{
+    font-size: 1.2rem;
+}
+
+.miniFooter{
+    background-color: var(--color900);
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid var(--color700);
+    color: var(--color500);
+    padding: 2rem;
+    font-size: 1.8rem;
+}
+
 
 
 /*<!---------------------- MOBILE ----------------------->*/
@@ -689,8 +808,6 @@
         gap: 0;
     }
 
-    /* TEEEEEEEEEEEESTE */
-
     .ourProjectsSlider {
     width: 100%;
     max-width: 100%;
@@ -764,6 +881,36 @@
         right: 5px;
     }
 
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footerBoxA{
+        padding: 2rem;
+        width: initial;
+    }
+
+    .footerLogo{
+        min-width: 20rem;
+    }
+
+    .footerText{
+        margin: 3rem auto;
+    }
+
+    .logosList{
+        gap: 3rem;
+    }
+
+    .logosItem{
+        max-width: 2.5rem;
+    }
+
+    .FooterBigBox{
+        width: 100%;
+        justify-content: space-around;
+    }
 }
 
 @media (min-width: 769px) and (max-width:1279px){
